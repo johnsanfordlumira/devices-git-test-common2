@@ -3,24 +3,26 @@
 #include <stdint.h>
 
 uint32_t test2_var = 0;
+uint32_t experimental_var_u32 = 13;
+
 
 uint32_t commonTest2Func (void)
 {
-    test2_var = 42;
+    test2_var = 42 + experimental_var_u32;
 
     return (test2_var);    
 }
 
 uint32_t commonTest2Func2 (void)
 {
-    test2_var = 43 * 2;
+    test2_var = (43 * 2) + experimental_var_u32;
 
     return (test2_var);        
 }
 
 uint32_t commonTest2Func3 (void)
 {
-    test2_var = 44 * 17;
+    test2_var = (44 * 17) - experimental_var_u32;
 
     return (test2_var);        
 }
@@ -28,7 +30,7 @@ uint32_t commonTest2Func3 (void)
 
 uint32_t commonTest2Func4 (void)
 {
-    test2_var = 45 * 54;
+    test2_var = (45 * 54) / experimental_var_u32;
 
     return (test2_var);    
 }
@@ -36,7 +38,7 @@ uint32_t commonTest2Func4 (void)
 
 uint32_t commonTest2Func5 (uint32_t initial_value_u32)
 {
-    test2_var = 48 + initial_value_u32;
+    test2_var = 48 + initial_value_u32 + experimental_var_u32;
 
     return (test2_var);    
 }
